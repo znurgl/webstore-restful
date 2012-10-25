@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="Order">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Id" type="xs:int" />
+				<xs:element name="Total" type="xs:int" />
+				<xs:element name="Date" type="xs:date" />
+				<xs:element name="Cancelled" type="xs:boolean" />
+				<xs:element name="Customer" type="customer" />
+				<xs:sequence>
+					<xs:element name="Item" type="item" minOccurs="0"
+						maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="item">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int" />
+			<xs:element name="Quantity" type="xs:int" />
+			<xs:element name="Product" type="product" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="product">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int" />
+			<xs:element name="Cost" type="xs:int" />
+			<xs:element name="Name" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="customer">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:int" />
+			<xs:element name="City" type="xs:string" />
+			<xs:element name="LastName" type="xs:string" />
+			<xs:element name="FirstName" type="xs:string" />
+			<xs:element name="PostCode" type="xs:string" />
+			<xs:element name="Street" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

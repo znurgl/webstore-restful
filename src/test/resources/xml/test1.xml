@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Order>
+	<id>0</id>
+	<Total>0</Total>
+	<Date>2012-10-25+01:00</Date>
+	<Cancelled>false</Cancelled>
+	<Customer>
+		<id>0</id>
+		<FirstName>aasd</FirstName>
+	</Customer>
+	<Items>
+		<Item>
+			<id>0</id>
+			<Quantity>12</Quantity>
+		</Item>
+		<Item>
+			<id>0</id>
+			<Quantity>22</Quantity>
+		</Item>
+	</Items>
+</Order>
